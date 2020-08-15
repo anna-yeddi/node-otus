@@ -7,8 +7,10 @@ function tree(nameItemsObj, indent) {
 
     // Indent items
     if ((key === 'items') & Array.isArray(value)) {
-      let indentItem = ' ├——',
-        indentChild = ' │   └——'
+      // let indentItem = ' ├——',
+      //   indentChild = ' │   └——'
+      let indentItem = ' \u251c\u2014\u2014',
+        indentChild = ' \u2502   \u2514\u2014\u2014'
       indent = indent === indentItem ? indentChild : indentItem
 
       value.map((item) => {
